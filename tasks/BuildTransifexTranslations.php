@@ -9,7 +9,8 @@
  * This is inspired by SilverStripe build tools. Thanks
  * @see https://github.com/silverstripe/silverstripe-buildtools/blob/master/src/GenerateJavascriptI18nTask.php
  */
-include_once "phing/Task.php";
+if (is_file("phing/Task.php")) 
+	include_once "phing/Task.php";
 
 // Ignore this file if phing is not installed
 if(!class_exists('Task')) {
